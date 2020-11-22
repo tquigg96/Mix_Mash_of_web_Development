@@ -1,0 +1,165 @@
+
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
+  }
+  body {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+.container{
+    display:grid;
+    height: 100vh;
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows: 5rem 900px 800px 800px 300px;
+    grid-template-areas: 
+            " nav nav"
+            " main main"
+            " section1 section2"
+            " section3 section4"
+            " footer footer";
+    grid-gap: 0.2rem;
+
+   
+
+}
+@media only screen and(max-width:550px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 2.2fr 1.5fr 1fr 1fr 1fr 1fr 0.5fr;
+        grid-template-areas:
+        "nav"
+        "sidebar"
+        "main"
+        "section1"
+        "section2"
+        "section3"
+        "section4"
+        "footer";
+        
+
+
+    }
+}
+body::-webkit-scrollbar{
+    width:0.25rem;
+}
+body::-webkit-scrollbar-track{
+    background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb{
+    background:#6649b8;
+}
+/*navbar*/
+nav{
+    background: blue;
+    grid-area: nav;
+    position:fixed;
+    width:100vw;
+    background: linear-gradient(to right, darkblue, lightblue);
+    height: 85px;
+    opacity:1;
+    float:left;
+    align-items: center;
+    
+}
+nav ul>li{
+    display:inline-block;
+    
+}
+nav ul li,a,button{
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out; 
+}
+nav li{
+    margin-right: 50px;
+}
+nav ul li a:hover{
+    text-decoration: none;
+    color: red;
+}
+
+
+/*end of nav-bar */
+
+
+main{
+    background-image: url("img/wallpaper-2864871.jpg");
+    grid-area: main;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*sidebar */
+.container .toggle ul li .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .container .toggle ul li .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .container .toggle ul li .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .container .toggle ul li .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .container .toggle ul li .sidenav {padding-top: 15px;}
+    .container .toggle ul li .sidenav a {font-size: 18px;}
+  }
+
+
+/*end of side bar*/
+#section1{
+    background:green;
+    grid-area: section1;
+}
+#section2{
+    background:purple;
+    grid-area:section2;
+}
+#section3{
+    background: #e080d4;
+    grid-area:section3;
+
+}
+#section4{
+    background: rgb(150, 230, 150);
+    grid-area:section4;
+}
+footer{
+    background:pink;
+    grid-area:footer;
+}

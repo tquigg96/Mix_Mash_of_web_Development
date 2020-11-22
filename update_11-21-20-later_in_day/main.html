@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel ="stylesheet" type="text/css">
+    <style src="button.js"></style>
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+</head>
+<body>
+    <div class = "container">
+        <nav>
+            <div id ="toggle">
+                 
+                </div>
+                    <ul>
+                        <li id="mySidenav" class="sidenav"> 
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <a href="#">About</a>
+                            <a href="#">Services</a>
+                            <a href="#">Clients</a>
+                            <a href="#">Contact</a>
+                        </li>
+                        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+                        <li>
+                            <a href = "">Home</a>
+                        </li>
+                        <li>
+                            <a href = "">Work</a>
+                        </li>
+                        <li>
+                            <a href = "">Services</a>
+                        </li>
+                        <li>
+                            <a href = "">Clients</a>
+                        </li>
+                        <li>
+                            <a href = "">Our Team</a>
+                        </li>
+                        <li>
+                            <a href = "https://github.com/tquigg96?tab=repositories">Github</a>
+                        </li>
+        </nav>
+        <main>
+            <div></div>
+        </main>
+    
+        <section id="section1">Section 1</section>
+        <section id="section2">Section 2</section>
+        <section id="section3">Section 3</section>
+        <section id="section4">Section 4</section>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
